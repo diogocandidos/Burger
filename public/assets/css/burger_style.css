@@ -45,12 +45,12 @@ body {
     text-align: center;
     
 }
-.devour {background-color: #00994d;
+.eat {background-color: #00994d;
         color: white;
         margin: 4px 4px;
         border-radius: 15px;
     }
-.devour:hover {
+.eat:hover {
     background-color: red }
 
 .btn {
