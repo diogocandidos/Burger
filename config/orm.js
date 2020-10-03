@@ -30,9 +30,7 @@ function objToSql(object) {
 
 // Create the methods that will execute the necessary MySQL commands in the controllers. 
 // ORM - Object-Relational Mapping
-// * selectAll
-// * insertOne
-// * updateOne
+
 var orm = {
 
     selectAll: function(table, callback) {
