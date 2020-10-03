@@ -2,16 +2,12 @@
 // ********************************** AJAX *****************************************
 // *********************************************************************************
 
-
-$(document).ready(function() {
-
+$(document).ready(() => {     
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
-  
-        
-
+          
       var newBurger = {
-        name: $("#burger").val().trim(),
+        name: $("#burger").val().trim(), 
         devoured: '0'
       };
 
@@ -21,15 +17,12 @@ $(document).ready(function() {
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
-      }).then(
-        function() {
+      }).then(() => {
           console.log("created new burger");
           location.reload();
         }
       );
-        //.catch(function (error) {
-        //console.log('Promise catch: ' + error);
-        // });
+        
     });
   
     $(".eat").on("click", function(event) {
@@ -48,14 +41,11 @@ $(document).ready(function() {
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newEatenState
-      }).then(
-        function() {
+      }).then(() => {
           console.log("changed eaten state to", newEaten);
           location.reload();
         }
       );
     });
-    //.catch(function (error) {
-        //console.log('Promise catch: ' + error);
-        // });
+    
 });

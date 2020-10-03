@@ -35,8 +35,7 @@ var orm = {
 
     selectAll: function(table, callback) {
         var queryString = "SELECT * FROM " + table;
-        connection.query(queryString, 
-            function(err, data) {
+        connection.query(queryString, (err, data) => {
             if (err) {
             throw err;
             }
@@ -57,7 +56,7 @@ var orm = {
       queryString += ") ";
 
       console.log("INSERT" + queryString);
-      connection.query(queryString, values, function(err, data) {
+      connection.query(queryString, values, (err, data) => {
         if (err) {
           throw err;
         }
@@ -76,7 +75,7 @@ var orm = {
       queryString += condition;
   
       console.log("UPDATE" + queryString);
-      connection.query(queryString, function(err, data) {
+      connection.query(queryString, (err, data) => {
         if (err) {
           throw err;
         }

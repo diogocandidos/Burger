@@ -9,7 +9,7 @@
    
         <div class="row">
                 <div class= "col-6">
-                <h2>To be eaten!</h2>
+                <h2>Burger List!</h2>
                 
                 {{#each burgers}}
                     {{#unless devoured}}
@@ -19,7 +19,7 @@
                 
             </div>
             <div class= "col-6">
-                <h2>Burger Eaten!</h2>
+                <h2>Devoured!</h2>
                 
                 {{#each burgers}}
                     {{#if devoured}}
@@ -31,11 +31,11 @@
         </div>
    <br></br>
 
-        <form class="create-form, text-center">
+        <form class="create-form">
             <div class="form-group">
                 <label for="burger">Burger Name:</label>
                 <input type="text" id="burger" name="name"> 
-                <button class = "btn btn-primary" type="submit">Add Burger</button>
+                <button class = "btn" type="submit">Add Burger</button>
             </div>
         </form> 
  </div>
