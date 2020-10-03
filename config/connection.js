@@ -3,6 +3,7 @@
 // *********************************************************************************
 
 var mysql = require("mysql");
+const dbConfig = require("../config/connection");
 
 var connection = mysql.createPool({
   host: dbConfig.HOST,
