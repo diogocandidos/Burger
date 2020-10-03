@@ -66,9 +66,7 @@ All the recommended files and directories from the steps above should look like 
 
  [Heroku link]()
 
- <img width="700" alt="note-taker1" src=" ">
-
-<img width="700" alt="note-taker2" src=" ">
+<img width="750" alt="eat-da-burger" src="https://user-images.githubusercontent.com/61811579/94982513-d90af180-04ef-11eb-96b7-cf8c2f2aeb4a.png">
 
 
   ## Licence
