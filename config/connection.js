@@ -12,13 +12,13 @@ var connection = mysql.createPool({
   database: dbConfig.DB
 });
 
-connection.connect((err) => {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+// connection.connect((err) => {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
+// });
 
 module.exports = connection;
 
