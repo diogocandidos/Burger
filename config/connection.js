@@ -3,22 +3,23 @@
 // *********************************************************************************
 
 var mysql = require("mysql");
-const dbConfig = require("../config/connection");
 
-var connection = mysql.createPool({
-  host: dbConfig.HOST,
-  user: dbConfig.USER,
-  password: dbConfig.PASSWORD,
-  database: dbConfig.DB
+
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 8889,
+  user: "root",
+  password: "root",
+  database: "burgers_db"
 });
 
-// connection.connect((err) => {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-// });
+connection.connect((err) => {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
 module.exports = connection;
 
